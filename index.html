@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 1 || Web Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <meta
+      name="description"
+      content="Ini adalah tugas pertama saya dalam membuat web profile"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!--  -->
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper-nav">
+        <div class="logo">
+          <img src="images/WebsiteProfilKu.png" alt="" class="logo-img" />
+        </div>
+        <input type="radio" name="slider" id="menu-btn-nav" />
+        <input type="radio" name="slider" id="close-btn-nav" />
+        <ul class="nav-links">
+          <label for="close-btn-nav" class="btn close-btn-nav"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="#information">Sosial Media</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <div class="nav-right">
+          <label for="menu-btn-nav" class="btn menu-btn-nav"
+            ><iconify-icon
+              icon="pajamas:hamburger"
+              style="color: #2d6e34"
+              width="30"
+            ></iconify-icon
+          ></label>
+        </div>
+      </div>
+    </nav>
+
+    <button onclick="topFunction()" id="myBtnTop" title="Go to top">
+      <iconify-icon icon="mingcute:arrow-up-line"></iconify-icon>
+    </button>
+
+    <div
+      class="header"
+      style="background-image: url(images/bg1.jpg)"
+      id="header"
+    >
+      <div class="text">
+        <h1>Web Profile</h1>
+        <p>Ini adalah tugas pertama saya dalam membuat web profile</p>
+      </div>
+    </div>
+
+    <div class="information" id="information">
+      <a href="#">
+        <div class="card">
+          <iconify-icon
+            icon="mdi:instagram"
+            class="icon"
+            width="50"
+          ></iconify-icon>
+          <p>Instagram</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="card">
+          <iconify-icon
+            icon="mdi:github"
+            class="icon"
+            width="50"
+          ></iconify-icon>
+          <p>Github</p>
+        </div>
+      </a>
+      <a href="#">
+        <div class="card">
+          <iconify-icon
+            icon="mingcute:linkedin-fill"
+            class="icon"
+            width="50"
+          ></iconify-icon>
+          <p>LinkedIn</p>
+        </div>
+      </a>
+    </div>
+    <!--  -->
+
+    <div class="about" id="tentang">
+      <div class="img">
+        <img src="images/imgAbout.png" alt="" />
+      </div>
+      <div class="text">
+        <h1>Singkat Tentang Saya</h1>
+        <p>
+          Nama saya <strong>Aura Iftitah</strong> , saya adalah seorang mahasiswa yang sedang mengampu
+          di Telkom University Surabaya. Saya mengampil prodi sistem informasi
+          fakultas rekayasa industri. Saya sangat tertarik dengan dunia IT dan
+          ingin menjadi seorang programmer yang handal.
+        </p>
+      </div>
+    </div>
+
+    <div class="container-home" id="faq">
+      <div class="sub-subjek">
+        <h2 class="title-faq-quiz">Pertanyaan Umum</h2>
+        <p>Berikut pertanyaan umum yang sering ditanyakan pengguna</p>
+      </div>
+
+      <div class="general-question">
+        <div class="card-faq" onclick="toggleFAQ(this)">
+          <div class="question">
+            kenapa kamu memilih prodi sistem informasi?
+            <span class="icon-faq">
+              <iconify-icon
+                icon="line-md:chevron-small-down"
+                style="color: #797979"
+                width="30"
+              ></iconify-icon>
+            </span>
+          </div>
+          <div class="text-faq">
+            <p>
+              Saya memilih prodi sistem informasi karena saya tertarik dengan
+              dunia IT dan ingin menjadi seorang programmer yang handal. Selain
+              itu, prodi sistem informasi juga memiliki prospek kerja yang baik
+              di masa depan.
+            </p>
+          </div>
+        </div>
+        <div class="card-faq" onclick="toggleFAQ(this)">
+          <div class="question">
+            kenapa kamu memilih Telkom University Surabaya?
+            <span class="icon-faq">
+              <iconify-icon
+                icon="line-md:chevron-small-down"
+                style="color: #797979"
+                width="30"
+              ></iconify-icon>
+            </span>
+          </div>
+          <div class="text-faq">
+            <p>
+              Saya memilih Telkom University Surabaya karena universitas ini
+              memiliki reputasi yang baik dan memiliki program studi yang sesuai
+              dengan minat saya. Selain itu, Telkom University Surabaya juga
+              memiliki fasilitas yang lengkap dan dosen yang berkualitas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-subjek" id="kontak">
+        <h2 class="title-faq">kontak Kami</h2>
+        <p>Silahkan hubungi kami jika ada saran maupun kesulitan</p>
+      </div>
+
+      <form class="contact-us" onsubmit="generateWhatsAppLink(event)">
+        <div class="left">
+          <p>Nama</p>
+          <input type="text" id="namaInput" placeholder="Nama" required />
+          <p>Nomor Telp</p>
+          <input
+            type="number"
+            id="nomorHpInput"
+            placeholder="Nomor Hp/Telephone"
+            required
+          />
+          <p>Email</p>
+          <input type="text" id="emailInput" placeholder="Email" required />
+        </div>
+        <div class="right">
+          <p>Pesan</p>
+          <textarea
+            name="pesan"
+            id="pesanInput"
+            placeholder="Pesan"
+            required
+          ></textarea>
+          <button type="submit">Kirim</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <img src="Assets/logo-footer.svg" alt="" />
+      <div class="line-footer"></div>
+      <p>© @copyright web profile 2024</p>
+    </footer>
+
+    <script>
+      function generateWhatsAppLink(event) {
+        event.preventDefault();
+        const nama = document.getElementById("namaInput").value;
+        const nomorHp = document.getElementById("nomorHpInput").value;
+        const email = document.getElementById("emailInput").value;
+        const pesan = document.getElementById("pesanInput").value;
+        const whatsappMessage = `Halo nama saya "${nama}" | Nomor hp: "${nomorHp}" | Email: "${email}" | Pesan: "${pesan}"`;
+        const whatsappLink = `https://api.whatsapp.com/send?phone=6287654321&text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+        window.open(whatsappLink, "_blank");
+      }
+
+      function toggleFAQ(card) {
+        const textFAQ = card.querySelector(".text-faq");
+        const chevronIcon = card.querySelector("iconify-icon");
+
+        if (textFAQ.style.display === "none" || !textFAQ.style.display) {
+          textFAQ.style.display = "block";
+          chevronIcon.classList.add("rotate180");
+        } else {
+          textFAQ.style.display = "none";
+          chevronIcon.classList.remove("rotate180");
+        }
+      }
+
+      // end of function poster slider
+
+      // Get the button
+      let mybutton = document.getElementById("myBtnTop");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      //   header
+
+      const bgImages = [
+        "images/bg1.jpg",
+        "images/bg2.jpg",
+        "images/bg3.jpg",
+        "images/bg4.jpg",
+      ];
+      let currentIndex = 0;
+
+      function changeBackground() {
+        const header = document.getElementById("header");
+        currentIndex = (currentIndex + 1) % bgImages.length;
+        header.style.backgroundImage = `url(${bgImages[currentIndex]})`;
+      }
+
+      // Ganti background setiap 5 detik (5000 ms)
+      setInterval(changeBackground, 2000);
+    </script>
+  </body>
+</html>
